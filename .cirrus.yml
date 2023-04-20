@@ -6,4 +6,5 @@ test_task:
     folder: node_modules
     fingerprint_script: cat package-lock.json
     populate_script: npm ci
+  browsers_script: npx playwright install
   test_script: npx playwright test
