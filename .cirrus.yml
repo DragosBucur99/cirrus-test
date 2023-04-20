@@ -11,6 +11,8 @@
 #   test_script: npx playwright test
 #   report_artifacts: 
 #       path: "**/playwright-report/index.html"
+env:
+  CIRRUS_CRON: nightly
 schedule:
   - cron: "0 0 * * 1"
     script: 
