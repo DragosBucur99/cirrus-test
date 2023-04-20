@@ -11,4 +11,5 @@ test_task:
   test_script: 
     script: npx playwright test
     test_artifacts: 
-      path: "build/playwright-report"
+      store: always
+      path: build/playwright-report
