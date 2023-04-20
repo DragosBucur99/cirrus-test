@@ -1,8 +1,9 @@
 container:
-  image: mcr.microsoft.com/playwright:focal
+  image: node:latest
 
-check_task:
-  dependecies_install_script: npm install
-  playwright_install_script: npx playwright install 
+test_task:
+  node_modules_cache:
+    folder: node_modules
+    fingerprint_script: cat package-lock.json
+    populate_script: npm ci
   test_script: npx playwright test
-
