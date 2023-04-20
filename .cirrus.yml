@@ -1,19 +1,13 @@
-# container:
-#   image: node:latest
+container:
+  image: node:latest
 
-# test_task:
-#   node_modules_cache:
-#     folder: node_modules
-#     fingerprint_script: cat package-lock.json
-#     populate_script: npm ci
-#   browsers_script: npx playwright install
-#   pw_dependecies_script: npx playwright install-deps   
-#   test_script: npx playwright test
-#   report_artifacts: 
-#       path: "**/playwright-report/index.html"
-env:
-  CIRRUS_CRON: nightly
-schedule:
-  - cron: "0 0 * * 1"
-    script: 
-      - echo "This build runs every Monday"
+test_task:
+  node_modules_cache:
+    folder: node_modules
+    fingerprint_script: cat package-lock.json
+    populate_script: npm ci
+  browsers_script: npx playwright install
+  pw_dependecies_script: npx playwright install-deps   
+  test_script: npx playwright test
+  report_artifacts: 
+      path: "**/playwright-report/index.html"
