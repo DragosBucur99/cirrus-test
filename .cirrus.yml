@@ -1,5 +1,6 @@
 container:
   image: mcr.microsoft.com/playwright:focal
 
-test_script:
-  - npx playwright test
+check_task:
+  test_script: npx playwright test
+
