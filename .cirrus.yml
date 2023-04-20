@@ -9,5 +9,7 @@ test_task:
   browsers_script: npx playwright install
   pw_dependecies_script: npx playwright install-deps   
   test_script: 
-    npx playwright test
-    test_artifacts: "playwright-report/*"
+    script: npx playwright test
+    test_artifacts: 
+      store: always
+      path: "build/playwright-report"
