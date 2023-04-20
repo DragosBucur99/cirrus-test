@@ -1,9 +1,3 @@
-schedule:
-  - cron: "* * * * *"
-    filter_branch: "master"
-    build_script:
-      - echo "This build runs every minute"
-
 container:
   image: node:latest
 
