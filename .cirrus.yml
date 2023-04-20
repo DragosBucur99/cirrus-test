@@ -10,6 +10,5 @@ test_task:
   pw_dependecies_script: npx playwright install-deps   
   test_script: 
     script: npx playwright test
-    test_artifacts: 
-      store: always
+   test_artifacts: 
       path: build/playwright-report
