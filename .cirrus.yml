@@ -8,4 +8,6 @@ test_task:
     populate_script: npm ci
   browsers_script: npx playwright install
   pw_dependecies_script: npx playwright install-deps   
-  test_script: npx playwright test
+  test_script: 
+    npx playwright test
+    test_artifacts: "playwright-report/*"
