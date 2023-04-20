@@ -2,5 +2,7 @@ container:
   image: mcr.microsoft.com/playwright:focal
 
 check_task:
+  dependecies_install_script: npm install
+  playwright_install_script: npx playwright install 
   test_script: npx playwright test
 
